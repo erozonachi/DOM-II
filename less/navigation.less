@@ -42,3 +42,36 @@
     }
   }
 } // .main-navigation
+
+.to-top {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 2.4rem;
+  background-color: #666;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    background-color: beige;
+    color: #666;
+    border: 1px solid #666;
+  }
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
