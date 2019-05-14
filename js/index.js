@@ -18,7 +18,12 @@ document.querySelectorAll(`img`).forEach(img => {
 
 // `keydown` listener on the body
 document.body.addEventListener(`keydown`, e => {
-  e.stopPropagation();
+  document.body.classList.toggle(`pageLook`);
+  console.log(`keydown on body`);
+});
+
+// .stopPropagation() effect...
+document.querySelector(`.container`).addEventListener(`click`, e => {
   document.body.classList.toggle(`pageLook`);
 });
 
@@ -37,6 +42,7 @@ window.addEventListener(`resize`, e => {
 document.querySelectorAll(`nav > a`).forEach(a => {
   a.addEventListener(`click`, e => {
     e.preventDefault();
+    e.stopPropagation();
   });
 });
 
